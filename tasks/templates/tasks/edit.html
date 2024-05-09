@@ -2,7 +2,7 @@
 
 {% block main %}
 {% include "tasks/_back.html" %}
-<h1 class="text-gray-500 font-bold text-[20px]">Create New Task</h1>
+<h1 class="text-gray-500 font-bold text-[20px]">Edit Task</h1>
     <!-- Task Form -->
     <form class="w-10/12 md:w-3/6 shadow-md bg-white rounded-2xl p-4">
       <div class="mb-4">
@@ -13,7 +13,7 @@
         >
         <input
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="task-name"
+          id="task-name" value="{{ task.title }}"
           type="text"
           placeholder="Enter task name"
           required
@@ -29,7 +29,7 @@
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="task-description"
           placeholder="Enter task description"
-        ></textarea>
+        >{{ task.description }}</textarea>
       </div>
       <div class="mb-4 flex">
         <div class="mr-2">
@@ -64,7 +64,7 @@
           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="submit"
         >
-          Create Task
+          Edit Task
         </button>
       </div>
     </form>

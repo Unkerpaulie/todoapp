@@ -8,6 +8,7 @@ urlpatterns = [
     path('new/', views.new, name="new"),
     path('done/', views.done, name="done"),
     path('undone/', views.undone, name="undone"),
-    path('detail/', views.detail, name="detail"),
-    path('delete/', views.delete, name="delete"),
+    path('<int:pk>/detail/', views.detail, name="detail"),
+    path('<int:pk>/edit/', views.edit, name="edit"),
+    path('<int:pk>/delete/', views.delete, name="delete"),
 ]
