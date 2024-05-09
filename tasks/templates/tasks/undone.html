@@ -1,14 +1,14 @@
 {% extends "tasks/base.html" %}
 
 {% block main %}
-    {% include "tasks/_header.html" %}
+{% include "tasks/_header.html" %}
     <!-- Tasks -->
     <section
       class="flex flex-1 flex-wrap justify-center gap-3 bg-[#fff0] w-10/12 md:w-11/12 h-full mb-3 rounded-2xl p-3 overflow-y-auto scrollbar-hide"
     >
       <!-- Task card -->
       <div
-        class="w-[355px] flex flex-col shadow-md bg-white h-[120px] rounded-xl p-3"
+        class="w-[355px] shadow-md flex flex-col bg-white h-[120px] rounded-xl p-3"
       >
         <!-- Top -->
         <div class="flex flex-row justify-between">
@@ -42,4 +42,5 @@
         </div>
       </div>
     </section>
-{% endblock main  %}
+
+{% endblock main %}

@@ -1,26 +1,37 @@
 {% extends "tasks/base.html" %}
 
 {% block main %}
-    {% include "tasks/_header.html" %}
+{% include "tasks/_back.html" %}
+
     <!-- Tasks -->
     <section
       class="flex flex-1 flex-wrap justify-center gap-3 bg-[#fff0] w-10/12 md:w-11/12 h-full mb-3 rounded-2xl p-3 overflow-y-auto scrollbar-hide"
     >
       <!-- Task card -->
-      <div
-        class="w-[355px] flex flex-col shadow-md bg-white h-[120px] rounded-xl p-3"
-      >
+      <div class="w-full md:w-4/6 flex flex-col bg-white h-fit rounded-xl p-3">
         <!-- Top -->
         <div class="flex flex-row justify-between">
           <!-- Left: Title and Description -->
           <div>
-            <a href="./task_detail.html">
-              <h1 class="text-green-500 font-semibold text-xl">
-                Create a ToDo App with Django
-              </h1>
-            </a>
+            <h1 class="text-green-500 font-semibold text-xl">
+              Create a ToDo App with Django
+            </h1>
+            <br />
+            <h2 class="text-blue-500 font-bold">
+              Status:
+              <span class="font-medium text-green-400"
+                >Completed <i class="bx bxs-badge-check"></i
+              ></span>
+            </h2>
+            <h2 class="text-gray-500 font-bold italic underline mt-3">
+              Description
+            </h2>
             <p class="text-gray-500 text-md">
-              The app will contain the following...
+              Lorem ipsum dolor sit amet consectetur adipiscing elit, urna
+              consequat felis vehicula class ultricies mollis dictumst, aenean
+              non a in donec nulla. Phasellus ante pellentesque erat cum risus
+              consequat imperdiet aliquam, integer placerat et turpis mi eros
+              nec lobortis taciti, vehicula nisl litora.
             </p>
           </div>
           <!-- Right: Toggle complete mode -->
@@ -42,4 +53,4 @@
         </div>
       </div>
     </section>
-{% endblock main  %}
+{% endblock main %}
